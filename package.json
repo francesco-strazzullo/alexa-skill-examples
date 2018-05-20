@@ -1,0 +1,18 @@
+{
+  "name": "aws-lamba-experiments",
+  "version": "1.0.0",
+  "description": "AWS Experiments",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francesco-strazzullo/aws-lamba-experiments.git"
+  },
+  "author": "Francesco Strazzullo",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "start": "lambda-local -l index.js -h handler -e sample-event.json"
+  },
+  "devDependencies": {
+    "lambda-local": "1.4.7"
+  }
+}
