@@ -13,6 +13,7 @@
     "start": "lambda-local -l index.js -h handler -e sample-event.json"
   },
   "devDependencies": {
-    "lambda-local": "1.4.7"
+    "lambda-local": "1.4.7",
+    "standard": "11.0.1"
   }
 }
