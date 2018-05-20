@@ -1,8 +1,22 @@
-exports.handler = function (event, context, callback) {
-  console.log('Running index.handler')
-  console.log('==================================')
-  console.log('event', event)
-  console.log('==================================')
-  console.log('Stopping index.handler')
-  callback(null, event)
+'use strict'
+const _ = require('lodash')
+
+module.exports.luckyNumber = (event, context, callback) => {
+  const upperLimit = _.get(event, 'request.intent.slots.UpperLimit.value', 100)
+  const number = _.random(0, upperLimit, false)
+  const response = {
+    version: '1.0',
+    response: {
+      outputSpeech: {
+        type: 'SSML',
+        ssml: `<speak>
+            Your lucky number is 
+            <amazon:effect name='whispered'>${number}</amazon:effect>
+        </speak>`
+      },
+      shouldEndSession: true
+    }
+  }
+
+  callback(null, response)
 }

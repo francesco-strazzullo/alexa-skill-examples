@@ -1,0 +1,25 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "random number",
+            "intents": [
+                {
+                    "name": "GetLuckyNumbers",
+                    "slots": [
+                        {
+                            "name": "UpperLimit",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "tell me my lucky numbers lower than {UpperLimit}",
+                        "what are my lucky numbers lower than {UpperLimit}",
+                        "tell me my lucky numbers",
+                        "what are my lucky numbers"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
