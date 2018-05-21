@@ -1,21 +1,14 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "random number",
+            "invocationName": "news title",
             "intents": [
                 {
-                    "name": "GetLuckyNumbers",
-                    "slots": [
-                        {
-                            "name": "UpperLimit",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
+                    "name": "NewsTitle",
+                    "slots": [],
                     "samples": [
-                        "tell me my lucky numbers lower than {UpperLimit}",
-                        "what are my lucky numbers lower than {UpperLimit}",
-                        "tell me my lucky numbers",
-                        "what are my lucky numbers"
+                        "tell me last news title",
+                        "what is the last news title"
                     ]
                 }
             ],
