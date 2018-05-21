@@ -7,6 +7,6 @@ provider:
 
 functions:
   luckyNumber:
-    handler: index.luckyNumber
+    handler: src/index.luckyNumber
     events:
       - alexaSkill
