@@ -1,2 +1,2 @@
-# aws-lamba-experiments
-AWS Experiments
+# alexa-skill-examples
+Alexa Skill examples
