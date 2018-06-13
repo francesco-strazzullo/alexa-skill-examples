@@ -1,14 +1,15 @@
 'use strict'
-const newsTitleExtractor = require('./newsTitleExtractor')
+const githubRepos = require('./githubRepos')
 
-module.exports.newsTitle = (event, context, callback) => {
-  newsTitleExtractor().then(title => {
+module.exports.readStars = (event, context, callback) => {
+  githubRepos.getRepoDetails('frameworkless-movement', 'manifesto').then(data => {
+    const text = `The Frameworkless movement has ${data.stargazers_count} stars!`
     const response = {
       version: '1.0',
       response: {
         outputSpeech: {
           type: 'SSML',
-          ssml: `<speak>${title}</speak>`
+          ssml: `<speak>${text}</speak>`
         },
         shouldEndSession: true
       }

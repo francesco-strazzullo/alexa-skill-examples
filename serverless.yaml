@@ -6,7 +6,7 @@ provider:
   region: eu-west-1
 
 functions:
-  newsTitle:
-    handler: src/index.newsTitle
+  readStars:
+    handler: src/index.readStars
     events:
       - alexaSkill
